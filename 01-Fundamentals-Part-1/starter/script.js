@@ -65,11 +65,31 @@ let $myCurrentJob = "Web Developer";
 // console.log(ageJonas > ageJohn);
 // console.log(ageJohn >= 20);
 
+// const currentYear = 2037;
+// const ageJonas = currentYear - 1991;
+// const ageJohn = currentYear - 2018;
+// console.log(currentYear - 1991 > currentYear - 2018);
+
+// console.log(`String with
+//  multiple
+//  lines`)
+// const age = 15;
+// const isOldEnough = age >= 18;
+// if (isOldEnough) {
+//     console.log("You are old enough to drink");
+// }
+
+//Type converstion
 console.log("****************");
-const currentYear = 2037;
-const ageJonas = currentYear - 1991;
-const ageJohn = currentYear - 2018;
-console.log(currentYear - 1991 > currentYear - 2018);
+const age = "15";
+console.log(Number(age) + 1);
+console.log(Number("Jonas"));
+console.log(String(23), 23);
+
+//Type coercion
+console.log('I am ' + 23 + ' years old');
+console.log("23" - "10");
+console.log("23" * "10");
 console.log("****************");
 
 
