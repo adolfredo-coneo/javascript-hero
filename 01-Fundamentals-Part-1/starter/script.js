@@ -80,16 +80,31 @@ let $myCurrentJob = "Web Developer";
 // }
 
 //Type converstion
-console.log("****************");
-const age = "15";
-console.log(Number(age) + 1);
-console.log(Number("Jonas"));
-console.log(String(23), 23);
 
-//Type coercion
-console.log('I am ' + 23 + ' years old');
-console.log("23" - "10");
-console.log("23" * "10");
+// const age = "15";
+// console.log(Number(age) + 1);
+// console.log(Number("Jonas"));
+// console.log(String(23), 23);
+// console.log(typeof null);
+
+// //Type coercion
+// console.log('I am ' + 23 + ' years old');
+// console.log("23" - "10");
+// console.log("23" * "10");
+
+console.log("****************");
+//5 Falsy values in JavaScript: undefined, null, 0, "", NaN
+//Anything else is truthy
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(" "));
+console.log(Boolean(NaN));
+console.log(Boolean(Infinity));
+console.log(Boolean(2));
+console.log(Boolean({}));
+
 console.log("****************");
 
 
