@@ -102,8 +102,67 @@ let $myCurrentJob = 'Web Developer';
 // console.log(Boolean({}));
 
 console.log('****************');
-const hasDriversLicense = true;
-const hasGoodVision = true;
+const day = 'Sunday';
 
+switch (day) {
+  case 'Monday':
+    console.log("It's Monday");
+    break;
+  case 'Tuesday':
+    console.log("It's Tuesday");
+    break;
+  case 'Wednesday':
+  case 'Thursday':
+    console.log("It's Wednesday o Thursday");
+    break;
+  case 'Friday':
+    console.log("It's Friday");
+    break;
+  case 'Saturday':
+    console.log("It's Saturday");
+    break;
+  case 'Sunday':
+    console.log("It's Sunday");
+    break;
+  default:
+    console.log("It's not a day");
+    break;
+}
+
+if (day === 'Monday') {
+  console.log("It's Monday");
+} else if (day === 'Tuesday') {
+  console.log("It's Tuesday");
+} else if (day === 'Wednesday' || day === 'Thursday') {
+  console.log("It's Wednesday or Thursday");
+} else if (day === 'Friday') {
+  console.log("It's Friday");
+} else if (day === 'Saturday' || day === 'Sunday') {
+  console.log("It's Saturday or Sunday");
+} else {
+  console.log("It's not a day");
+}
 
 console.log('****************');
+
+
+function wordParser(sentence) {
+    const words = sentence.split(" ");
+    const separators = sentence.match(/[a-z]\s|[a-z]\W([a-z]*\s)|[a-z]\W/g);
+    const newWords = words.map((word,index) => {
+      const firstLetter = word.charAt(0); 
+      const lastLetter = separators[index];
+      const lastIndex = (lastLetter.charAt(lastLetter.length -1) === ' ' ? lastLetter.length - 1 : lastLetter.length) * -1;
+      const distinctChars = word.slice(1,lastIndex).split('').reduce((acc, curr)=>{
+        if(!acc.includes(curr)){
+          acc.push(curr); 
+        }
+        return acc;
+      }, [])
+      return firstLetter + (distinctChars.length ? distinctChars.length : '')  + lastLetter;
+    });
+    return newWords.join("");  
+  }
+  
+  var output = wordParser("Creativity is thinking-up new things. Innovation is doing new things!");
+  console.log(output);
