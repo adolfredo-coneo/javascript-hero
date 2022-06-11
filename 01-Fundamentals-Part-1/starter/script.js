@@ -3,8 +3,8 @@ let js = 'amazing';
 
 // console.log(firstName);
 
-let myFirstJob = "Web Developer";
-let $myCurrentJob = "Web Developer";
+let myFirstJob = 'Web Developer';
+let $myCurrentJob = 'Web Developer';
 
 //The 7 primitive data types that JavaScript supports are:
 //Number let myAge = 30;
@@ -17,7 +17,6 @@ let $myCurrentJob = "Web Developer";
 
 //In JavaScript, value has type, not variable
 
-
 // let javascriptIsFun = true;
 // console.log(javascriptIsFun);
 // console.log(typeof javascriptIsFun);
@@ -29,7 +28,6 @@ let $myCurrentJob = "Web Developer";
 // console.log(typeof isUndefined);
 // console.log(typeof null);
 
-
 // const birthYear = 1990;
 // var job = "Web Developer"; //old way
 // job = "Software Engineer";
@@ -38,7 +36,6 @@ let $myCurrentJob = "Web Developer";
 
 //Operators
 //Allows to transform values or combine values to create new values
-
 
 //Arithmetic Operators
 // const currentYear = 2037;
@@ -92,19 +89,21 @@ let $myCurrentJob = "Web Developer";
 // console.log("23" - "10");
 // console.log("23" * "10");
 
-console.log("****************");
 //5 Falsy values in JavaScript: undefined, null, 0, "", NaN
 //Anything else is truthy
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(0));
-console.log(Boolean(""));
-console.log(Boolean(" "));
-console.log(Boolean(NaN));
-console.log(Boolean(Infinity));
-console.log(Boolean(2));
-console.log(Boolean({}));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(" "));
+// console.log(Boolean(NaN));
+// console.log(Boolean(Infinity));
+// console.log(Boolean(2));
+// console.log(Boolean({}));
 
-console.log("****************");
+console.log('****************');
+const hasDriversLicense = true;
+const hasGoodVision = true;
 
 
+console.log('****************');

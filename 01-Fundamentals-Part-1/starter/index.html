@@ -22,11 +22,18 @@
         color: white;
       }
     </style>
-    <script src="script.js"></script>
+    <script src="script.js" ></script>
     <script src="assignments.js"></script>
     <script src="challenge_1_2.js"></script>
+    <script src="challenge_3.js"></script>
+    <script >
+      var parent  = document.getElementById('parent');
+      console.log("AAAA", parent.firstChild.nodeName);
+    </script>
   </head>
-  <body>
-    <h1>JavaScript Fundamentals – Part 1</h1>
+  <body onclick="console.log('Hello body!')">
+    <div id="parent">
+      <input type="button" onclick="console.log('Hello button!')" value="Hello" />
+    </div>
   </body>
 </html>
