@@ -28,6 +28,20 @@ function add(a, b){
 }
 
 //Function expression, can be called after it is defined
-const add = function(a, b){
+const add2 = function(a, b){
     return a + b;
 }
+//arrow functions
+const add3 = (a, b) => a + b;
+
+const cutFruitPieces = (fruit) => fruit * 4;
+
+function fruitProcessor2(apples, oranges){
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+    return juice;
+}
+
+console.log(fruitProcessor2(3, 2));
