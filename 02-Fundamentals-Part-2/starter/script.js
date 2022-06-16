@@ -62,3 +62,18 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'John'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
+
+//Expressions and Statements
+//Expression - something that produces a value
+//Statement - something that does something
+
+//Arrays
+const numbers = [1, 2, 3, 4, 5];
+const numbers2 = new Array(1, 2, 3, 4, 5);
+const years = [1990, 1991, 1992, 1993, 1994];
+
+console.log(calcAge(years[0]));
+console.log(calcAge(years[1]));
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])];
+console.log(ages);
