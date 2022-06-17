@@ -77,3 +77,23 @@ console.log(calcAge(years[1]));
 
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])];
 console.log(ages);
+
+const friends = ['John', 'Mike', 'Jane', 'Mary'];
+const newLength = friends.push('Bob');
+
+console.log(friends, newLength);
+
+friends.unshift('Jane');
+console.log(friends);
+
+//Remove elements
+const popped = friends.pop(); //Last
+console.log(friends, popped);
+
+friends.shift(); //First
+console.log(friends);
+
+console.log(friends.indexOf('Mike'));
+
+console.log(friends.includes('Mike'));
+
