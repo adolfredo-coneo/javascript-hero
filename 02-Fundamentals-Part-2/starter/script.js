@@ -75,7 +75,13 @@ const years = [1990, 1991, 1992, 1993, 1994];
 console.log(calcAge(years[0]));
 console.log(calcAge(years[1]));
 
-const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3]), calcAge(years[4])];
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[2]),
+  calcAge(years[3]),
+  calcAge(years[4]),
+];
 console.log(ages);
 
 const friends = ['John', 'Mike', 'Jane', 'Mary'];
@@ -97,3 +103,48 @@ console.log(friends.indexOf('Mike'));
 
 console.log(friends.includes('Mike'));
 
+//////////////////// Objects have properties
+//object literal syntax
+const jonas = {
+  firstName: 'Jonas',
+  birthYear: 1991,
+  hobbies: ['Sports', 'Cooking'],
+  address: {
+    city: 'Berlin',
+    country: 'Germany',
+  },
+  friends: ['Jane', 'Mike', 'Mary'],
+  license: false,
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is ${this.calcAge()} years old, lives in ${
+      this.location
+    } and he ${this.license ? 'has' : 'does not have'} a license`;
+  },
+};
+console.log(jonas['address']);
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+
+/*const property = prompt('Enter a property name');
+
+if (jonas[property]) {
+  console.log(jonas[property]);
+} else {
+  console.log('Property not found');
+}*/
+
+jonas.location = 'Berlin';
+jonas['telephone'] = '123456789';
+console.log(jonas);
+
+const phrase = `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`;
+console.log(phrase);
+//jonas.calcAge();
+console.log(jonas.age);
+//console.log(jonas['calcAge']());
+
+console.log(jonas.getSummary());
