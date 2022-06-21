@@ -148,3 +148,65 @@ console.log(jonas.age);
 //console.log(jonas['calcAge']());
 
 console.log(jonas.getSummary());
+
+const jonasArray = [
+  'Jonas',
+  'Berlin',
+  2037 - 1991,
+  'Sports',
+  ['Jane', 'Mike', 'Mary'],
+  false,
+  '2020',
+];
+
+let jonasTypes = [];
+console.log('------ STRINGS --------');
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] !== 'string') continue;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+  //jonasTypes[i] = typeof jonasArray[i];
+  jonasTypes.push(typeof jonasArray[i]);
+}
+
+console.log(jonasTypes);
+
+console.log('------ BREAK with number --------');
+for (let i = 0; i < jonasArray.length; i++) {
+  if (typeof jonasArray[i] === 'number') break;
+  console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+const years2 = [1990, 1991, 1992, 1993, 1994];
+const ages2 = [];
+for (let i = 0; i < years2.length; i++) {
+  ages2.push(2037 - years2[i]);
+}
+
+console.log('------ Backwards --------');
+for (let i = jonasArray.length - 1; i >= 0; i--) {
+  console.log(jonasArray[i]);
+}
+
+console.log('------ Loop in Loop --------');
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`Starting Exercise ${exercise}`);
+  for (let set = 1; set <= 4; set++) {
+    console.log(`Exercise ${exercise}: Set ${set}`);
+  }
+}
+
+console.log('------ While Loop --------');
+let counter = 0;
+while (counter <= 3) {
+  console.log(`Counter is at ${counter}`);
+  counter++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`Dice is at ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log('Dice is at 6, loop is ending');
+  }
+}
